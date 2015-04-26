@@ -14,13 +14,17 @@ define([], function() {
     element.style.left = '-' + WIDTH.toString() + 'px';
   }
 
+  var getUserMedia = navigator.getUserMedia ||
+                     navigator.webkitGetUserMedia ||
+                     navigator.mozGetUserMedia;
+
   var module = {
     start: function(callback) {
       if (video) {
         return;
       }
 
-      navigator.webkitGetUserMedia({audio: false, video: true},
+      getUserMedia.call(navigator, {audio: false, video: true},
         function(stream) {
           video = document.createElement('video');
           sizeAndOffscreen(video);

@@ -4,6 +4,9 @@ Webcam Globe
 A [three.js](http://threejs.org/) toy that creates a dynamic texture based on
 your browser's webcam, then puts it on a spinning globe.
 
+See a [live demo](https://chrisguidry.github.io/webcam-texture/) of this
+repository.  You will need to allow access to your webcam.
+
 In order to run the sample and play with it, you will need to load it from a
 webserver.  The simplest way (that I know of) to do that is to use Python's
 built-in webserver:
