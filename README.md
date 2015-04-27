@@ -1,8 +1,8 @@
-Webcam Globe
-============
+Webcam Texture
+==============
 
-A [three.js](http://threejs.org/) toy that creates a dynamic texture based on
-your browser's webcam, then puts it on a spinning globe.
+A [three.js](http://threejs.org/) toy that creates a dynamic texture from your
+browser's webcam.
 
 See a [live demo](https://chrisguidry.github.io/webcam-texture/) of this
 repository.  You will need to allow access to your webcam.
@@ -42,6 +42,19 @@ To use it:
       }
       requestAnimationFrame(render);
     });
+
+The basic idea of `webcam-texture` is to create an offscreen `<video>` element
+capturing the video from your webcam.  Then, on each render cycle, copy the
+current frame from the `<video>` element to an offscreen `<canvas>` element of
+the same dimensions.  That `<canvas>` element is the source of the three.js
+`MeshBasicMaterial` texture.
+
+Find this useful?  Find a bug?
+==============================
+
+Please [file an issue](https://github.com/chrisguidry/webcam-texture/issues)
+or send a pull request.  I haven't tested this for browser compatibility beyond
+Chrome, Firefox, and Safari, so let me know how it goes.
 
 
 MIT Licensed
