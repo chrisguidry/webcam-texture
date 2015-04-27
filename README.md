@@ -11,7 +11,8 @@ In order to run the sample and play with it, you will need to load it from a
 webserver.  The simplest way (that I know of) to do that is to use Python's
 built-in webserver:
 
-    $ cd webcam-globe
+    $ git clone https://github.com/chrisguidry/webcam-texture.git
+    $ cd webcam-texture
     $ python -m SimpleHTTPServer 10000  # then load http://localhost:10000
 
 This example uses [require.js](http://requirejs.org/), and the interesting
