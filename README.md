@@ -14,9 +14,9 @@ built-in webserver:
     $ cd webcam-globe
     $ python -m SimpleHTTPServer 10000  # then load http://localhost:10000
 
-This example uses [require.js](http://requirejs.org/) and the interesting
-behavior of the webcam texture is in the module [`webcam-texture.js`](webcam-texture.js).  
-To use it:
+This example uses [require.js](http://requirejs.org/), and the interesting
+behavior of the webcam texture is in the module
+[`webcam-texture.js`](webcam-texture.js).  To use it:
 
     require(['webcam-texture'], function(webcamTexture) {
       webcamTexture.start(function(material) {
